@@ -1,73 +1,103 @@
-# Welcome to your Lovable project
+# Altralink - High-Speed Internet Services Website
 
-## Project info
+A modern, responsive website for Altralink's fiber optic and cable internet services. Built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/a80ba06e-2b4c-4939-9c86-ed6fa02a6e34
+## 🚀 Features
 
-## How can I edit this code?
+- **Modern Design**: Clean, professional interface with engaging animations
+- **Fully Responsive**: Optimized for all devices and screen sizes
+- **High Performance**: Built with Vite for fast loading and development
+- **Interactive Components**: Engaging UI elements with smooth transitions
+- **SEO Optimized**: Structure and content optimized for search engines
 
-There are several ways of editing your application.
+## 🛠️ Technologies Used
 
-**Use Lovable**
+- **Frontend**: React 18, TypeScript
+- **Styling**: Tailwind CSS, shadcn/ui components
+- **Build Tool**: Vite
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **Animations**: Custom CSS animations with Tailwind
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a80ba06e-2b4c-4939-9c86-ed6fa02a6e34) and start prompting.
+## 📦 Installation
 
-Changes made via Lovable will be committed automatically to this repo.
+1. Clone the repository:
+```bash
+git clone https://github.com/altralink/altralink2.git
+cd altralink2
+```
 
-**Use your preferred IDE**
+2. Install dependencies:
+```bash
+npm install
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and visit `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🏗️ Build and Deploy
 
-**Use GitHub Codespaces**
+### Local Build
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Deploy to GitHub Pages
+The project is configured for automatic deployment to GitHub Pages:
 
-## What technologies are used for this project?
+1. Push changes to the `main` branch
+2. GitHub Actions will automatically build and deploy
+3. Visit your live site at: `https://altralink.github.io/altralink2/`
 
-This project is built with:
+## 📁 Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+src/
+├── components/          # Reusable UI components
+├── pages/              # Page components
+├── layouts/            # Layout components
+├── assets/             # Images and static assets
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── styles/             # Global styles
+```
 
-## How can I deploy this project?
+## 🎨 Key Sections
 
-Simply open [Lovable](https://lovable.dev/projects/a80ba06e-2b4c-4939-9c86-ed6fa02a6e34) and click on Share -> Publish.
+- **Hero Section**: Eye-catching introduction with animated elements
+- **Features**: Comprehensive service offerings
+- **Speed Comparison**: Visual comparison of internet plans
+- **FAQ**: Common questions and answers
+- **Contact**: Multiple ways to get in touch
 
-## Can I connect a custom domain to my Lovable project?
+## 🔧 Development
 
-Yes, you can!
+This project uses:
+- ESLint for code linting
+- TypeScript for type safety
+- Tailwind CSS for styling
+- React Router for navigation
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📱 Mobile Responsive
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The website is fully optimized for:
+- Mobile phones (320px+)
+- Tablets (768px+)
+- Desktop computers (1024px+)
+- Large screens (1440px+)
+
+## 🚀 Deployment
+
+Automatic deployment is configured via GitHub Actions. Every push to the main branch triggers a new deployment to GitHub Pages.
+
+## 📄 License
+
+This project is proprietary software for Altralink.
+
+---
+
+**Live Website**: [https://altralink.github.io/altralink2/](https://altralink.github.io/altralink2/)
