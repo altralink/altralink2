@@ -22,7 +22,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/altralink2">
+      <BrowserRouter>
         <ScrollToTop />
         <Routes>
           <Route element={<MainLayout />}>
