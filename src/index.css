@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    --primary: 229 100% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 229 100% 65%;
+
+    --secondary: 210 100% 97%;
+    --secondary-foreground: 229 100% 56%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 240 5% 50%;
+
+    --accent: 229 100% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 229 100% 56%;
+
+    --radius: 0.75rem;
+
+    /* Custom ISP theme colors */
+    --navy-deep: 240 60% 15%;
+    --navy-medium: 240 50% 25%;
+    --blue-vibrant: 229 100% 56%;
+    --blue-light: 220 100% 95%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(229 100% 56%), hsl(220 90% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(229 100% 56%) 0%, hsl(240 60% 40%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(240 60% 15%) 0%, hsl(240 50% 25%) 100%);
+    
+    /* Shadows */
+    --shadow-primary: 0 10px 40px -10px hsl(229 100% 56% / 0.4);
+    --shadow-card: 0 4px 20px -2px hsl(240 10% 15% / 0.1);
+    --shadow-lg: 0 20px 50px -12px hsl(240 10% 15% / 0.15);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 240 60% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 50% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 50% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 229 100% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 40% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 40% 18%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 229 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 30% 20%;
+    --input: 240 30% 20%;
+    --ring: 229 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer utilities {
+  .wave-bottom {
+    clip-path: ellipse(100% 100% at 50% 0%);
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-dark {
+    background: var(--gradient-dark);
+  }
+  
+  .shadow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-lg-custom {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Enhanced animations for better visual appeal */
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px rgba(229, 100, 56, 0.5);
+    }
+    to {
+      box-shadow: 0 0 30px rgba(229, 100, 56, 0.8);
+    }
+  }
+  
+  /* Network visualization styles */
+  .network-line {
+    stroke-dasharray: 5,5;
+    animation: dash 2s linear infinite;
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: -10;
+    }
+  }
+  
+  /* Scroll-triggered animations */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Enhanced mobile responsiveness */
+  @media (max-width: 768px) {
+    .mobile-text-4xl {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+    
+    .mobile-text-5xl {
+      font-size: 3rem;
+      line-height: 1.1;
+    }
+    
+    .mobile-p-4 {
+      padding: 1rem;
+    }
+    
+    .mobile-p-6 {
+      padding: 1.5rem;
+    }
+    
+    .mobile-gap-4 {
+      gap: 1rem;
+    }
+    
+    .mobile-gap-6 {
+      gap: 1.5rem;
+    }
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-glow));
+  }
+}
