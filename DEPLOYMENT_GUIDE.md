@@ -1,61 +1,125 @@
-# GitHub Pages Deployment Setup Complete
+# GitHub Pages Deployment - Altralink
 
-Your Altralink website is now configured for automatic deployment to GitHub Pages! Here's what has been set up:
+Your website is configured to automatically deploy to **https://altralink.com/** via GitHub Pages whenever you push to the main branch.
 
-## What's Been Configured:
+## Configuration Complete ✓
 
-### 1. Vite Configuration
-- Updated `vite.config.ts` with `base: "/altralink2/"` for GitHub Pages
-- This ensures all assets load correctly from the subdirectory
+### 1. GitHub Actions Workflow
+- **File**: `.github/workflows/deploy.yml`
+- **Trigger**: Automatic on push to main branch
+- **Build Tool**: Bun (fast JavaScript runtime)
+- **Deployment**: GitHub Pages with official actions
 
-### 2. Package.json Updates
-- Added `gh-pages` as a dev dependency
-- Added `deploy` script for manual deployment if needed
+### 2. Custom Domain Setup
+- **Domain**: altralink.com
+- **CNAME File**: `public/CNAME` (automatically deployed)
+- **Base Path**: `/` (root domain)
 
-### 3. GitHub Actions Workflow
-- Created `.github/workflows/deploy.yml` for automatic deployment
-- Triggers on every push to the `main` branch
-- Uses official GitHub Pages actions for security and reliability
+### 3. Build Configuration
+- **Framework**: React + Vite
+- **Output**: `dist/` directory
+- **Package Manager**: Bun
 
-## Next Steps to Complete Setup:
+## How to Deploy
 
-### 1. Push Your Changes to GitHub
+### Automatic Deployment (Recommended)
+Simply push your changes to the main branch:
+
 ```bash
 git add .
-git commit -m "Configure GitHub Pages deployment"
+git commit -m "Your update message"
 git push origin main
 ```
 
-### 2. Enable GitHub Pages (One-time setup)
-1. Go to your repository: https://github.com/altralink/altralink2
-2. Click on **Settings** tab
-3. Scroll down to **Pages** section in the left sidebar
-4. Under **Source**, select **GitHub Actions**
-5. Save the settings
+The GitHub Action will automatically:
+1. Install dependencies with Bun
+2. Build your React application
+3. Deploy to GitHub Pages
+4. Update https://altralink.com/ within 1-2 minutes
 
-### 3. First Deployment
-After pushing and enabling Pages, the GitHub Action will automatically:
-- Build your React/Vite application
-- Deploy it to GitHub Pages
-- Your site will be available at: `https://altralink.github.io/altralink2/`
+### Manual Deployment
+Trigger deployment manually from GitHub:
 
-## Manual Deployment (Optional)
-If you ever need to deploy manually:
-```bash
-npm run build
-npm run deploy
+1. Go to https://github.com/altralink/maincode
+2. Click **Actions** tab
+3. Select **Deploy to GitHub Pages**
+4. Click **Run workflow** → Select **main** branch → **Run workflow**
+
+## DNS Configuration
+
+Ensure your domain registrar has these DNS records:
+
+**A Records (for altralink.com):**
+```
+Type: A, Host: @, Value: 185.199.108.153
+Type: A, Host: @, Value: 185.199.109.153
+Type: A, Host: @, Value: 185.199.110.153
+Type: A, Host: @, Value: 185.199.111.153
 ```
 
-## Important Notes:
+**CNAME Record (for www subdomain - optional):**
+```
+Type: CNAME, Host: www, Value: altralink.github.io
+```
 
-- **Automatic Updates**: Every push to `main` branch will trigger a new deployment
-- **Build Time**: First deployment may take 2-3 minutes
-- **Custom Domain**: You can add a custom domain later in GitHub Pages settings
-- **HTTPS**: GitHub Pages provides free SSL certificates
+## Monitoring Deployments
 
-## Monitoring Deployments:
-- Go to **Actions** tab in your GitHub repo to see deployment status
-- Green checkmark = successful deployment
-- Red X = deployment failed (check logs for details)
+### View Deployment Status
+1. Repository: https://github.com/altralink/maincode
+2. Click **Actions** tab
+3. Latest workflow shows build/deploy status
+   - ✓ Green = Successful
+   - ✗ Red = Failed (click for logs)
 
-Your website is now ready for automatic deployment! 🚀
+### Deployment Time
+- Build time: ~1-2 minutes
+- DNS propagation: Up to 24 hours (first time)
+- Subsequent updates: 1-2 minutes
+
+## Local Development
+
+### Development Server
+```bash
+bun install    # Install dependencies
+bun run dev    # Start dev server at localhost:8080
+```
+
+### Test Production Build
+```bash
+bun run build    # Build for production
+bun run preview  # Preview production build
+```
+
+## Troubleshooting
+
+### Build Fails
+- Check **Actions** tab for error logs
+- Test build locally: `bun run build`
+- Ensure all dependencies are in `package.json`
+
+### Domain Not Working
+- Verify `public/CNAME` contains: `altralink.com`
+- Check DNS records with your domain provider
+- Allow 24 hours for DNS propagation (first time)
+- Clear browser cache
+
+### Old Content Showing
+- Verify deployment succeeded in Actions tab
+- Hard refresh browser: Ctrl + Shift + R (Windows)
+- Check if latest commit is deployed
+
+## GitHub Pages Settings
+
+Your repository is configured with:
+- **Source**: GitHub Actions
+- **Custom Domain**: altralink.com
+- **HTTPS**: Enforced (automatic SSL certificate)
+
+To verify settings:
+1. Go to repository Settings
+2. Click **Pages** (left sidebar)
+3. Confirm **Source** is set to **GitHub Actions**
+
+---
+
+**Your website is ready!** Push to main branch to deploy automatically. 🚀
