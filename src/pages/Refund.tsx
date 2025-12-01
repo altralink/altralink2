@@ -75,7 +75,7 @@ const Refund = () => {
             <h2 className="text-3xl font-bold mb-4 mt-12">How to Request a Refund</h2>
             <p className="text-muted-foreground mb-4">To request a refund:</p>
             <ol className="list-decimal list-inside text-muted-foreground mb-6 space-y-2">
-              <li>Contact our customer service team at +1 (888) 442-4532</li>
+              <li>Contact our customer service team at +1 (888) 508-6472</li>
               <li>Provide your account information and reason for cancellation</li>
               <li>Schedule equipment return (if applicable)</li>
               <li>Refunds are processed within 7-10 business days after equipment is returned</li>
@@ -121,7 +121,7 @@ const Refund = () => {
               For questions about refunds or to request a refund:
             </p>
             <ul className="list-none text-muted-foreground mb-6 space-y-2">
-              <li>Phone: +1 (888) 442-4532 (24/7)</li>
+              <li>Phone: +1 (888) 508-6472 (24/7)</li>
               <li>Email: billing@altralink.com</li>
               <li>Chat: Available on our website during business hours</li>
             </ul>

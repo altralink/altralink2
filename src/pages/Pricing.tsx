@@ -201,7 +201,7 @@ const Pricing = () => {
               <Link to="/contact">Contact Us</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary" asChild>
-              <a href="tel:+18884424532">Call +1 (888) 442-4532</a>
+              <a href="tel:+18885086472">Call +1 (888) 508-6472</a>
             </Button>
           </div>
         </div>

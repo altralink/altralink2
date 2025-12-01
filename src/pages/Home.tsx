@@ -144,7 +144,7 @@ const Home = () => {
                     </Link>
                   </Button>
                   <Button size="lg" variant="outline" asChild className="border-2 border-white/30 text-blue-600 hover:text-blue-700 hover:bg-white/10 backdrop-blur-sm px-6 md:px-8 py-3 md:py-4 text-base md:text-lg">
-                    <a href="tel:+18884424532">
+                    <a href="tel:+18885086472">
                       Call Now
                     </a>
                   </Button>
@@ -481,8 +481,8 @@ const Home = () => {
                 with speed and reliability, Nexusnett delivers consistent performance.
               </p>
               <Button size="lg" className="animate-scale-in text-sm md:text-base" style={{ animationDelay: '0.6s' }} asChild>
-                <a href="tel:+18889932795" className="flex items-center">
-                  Call (888) 993-2795
+                <a href="tel:+18885086472" className="flex items-center">
+                  Call (888) 508-6472
                   <ChevronRight className="ml-2 w-4 md:w-5 h-4 md:h-5" />
                 </a>
               </Button>
@@ -851,7 +851,7 @@ const Home = () => {
                 <Link to="/contact">Contact Support</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="tel:+18884424532">Call (888) 442-4532</a>
+                <a href="tel:+18885086472">Call (888) 508-6472</a>
               </Button>
             </div>
           </div>
@@ -879,10 +879,10 @@ const Home = () => {
               </Link>
             </Button>
             <a 
-              href="tel:+18884424532" 
+              href="tel:+18885086472" 
               className="text-xl font-semibold hover:text-secondary transition-colors flex items-center group"
             >
-              Or call: +1 (888) 442-4532
+              Or call: +1 (888) 508-6472
               <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>

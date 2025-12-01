@@ -42,11 +42,11 @@ const Navigation = () => {
           {/* Phone & CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="tel:+18884424532"
+              href="tel:+18885086472"
               className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="font-semibold">+1 (888) 442-4532</span>
+              <span className="font-semibold">+1 (888) 508-6472</span>
             </a>
             <Button asChild>
               <Link to="/contact">Get Started</Link>
@@ -82,11 +82,11 @@ const Navigation = () => {
                 </Link>
               ))}
               <a
-                href="tel:+18884424532"
+                href="tel:+18885086472"
                 className="flex items-center space-x-2 px-4 py-2 text-foreground hover:text-primary transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span className="font-semibold">+1 (888) 442-4532</span>
+                <span className="font-semibold">+1 (888) 508-6472</span>
               </a>
               <div className="px-4 pt-2">
                 <Button asChild className="w-full">

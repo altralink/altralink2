@@ -106,7 +106,7 @@ const Privacy = () => {
             </p>
             <ul className="list-none text-muted-foreground mb-6 space-y-2">
               <li>Email: privacy@altralink.com</li>
-              <li>Phone: +1 (888) 442-4532</li>
+              <li>Phone: +1 (888) 508-6472</li>
               <li>Address: 123 Internet Blvd, Tech City, TC 12345</li>
             </ul>
           </div>

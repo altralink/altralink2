@@ -64,10 +64,10 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-lg mb-1">Phone</h3>
                         <a 
-                          href="tel:+18884424532" 
+                          href="tel:+18885086472" 
                           className="text-primary hover:underline text-lg"
                         >
-                          +1 (888) 442-4532
+                          +1 (888) 508-6472
                         </a>
                         <p className="text-sm text-muted-foreground mt-1">
                           Available 24/7 for your convenience
@@ -221,7 +221,7 @@ const Contact = () => {
             Call us now and speak with one of our internet specialists
           </p>
           <Button size="lg" asChild>
-            <a href="tel:+18884424532">Call +1 (888) 442-4532</a>
+            <a href="tel:+18885086472">Call +1 (888) 508-6472</a>
           </Button>
         </div>
       </section>
